@@ -5,7 +5,7 @@ import AppNavbar from "./components/Navbar.jsx";
 import DashboardPage from "./pages/DashboardPage.jsx";
 import OrdersPage from "./pages/OrdersPage.jsx";
 import MenuPage from "./pages/MenuPage.jsx";
-
+import RouteOptimizationPage from "./pages/RouteOptimizationPage.jsx";
 const App = () => (
   <Router>
     <AppNavbar />
@@ -14,6 +14,7 @@ const App = () => (
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/orders" element={<OrdersPage />} />
       <Route path="/menu" element={<MenuPage />} />
+      <Route path="/route-optimization" element={<RouteOptimizationPage />} />
     </Routes>
   </Router>
 );

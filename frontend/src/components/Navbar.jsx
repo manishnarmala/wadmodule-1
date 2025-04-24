@@ -12,6 +12,7 @@ const AppNavbar = () => (
           <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
           <NavLink className="nav-link" to="/orders">Orders</NavLink>
           <NavLink className="nav-link" to="/menu">Menu & Pricing</NavLink>
+          <NavLink className="nav-link" to="/route-optimization">Optimize Route</NavLink>
         </Nav>
       </Navbar.Collapse>
     </Container>
