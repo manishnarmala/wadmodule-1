@@ -1,0 +1,82 @@
+.page-title {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .search-input {
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .filter-select {
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .membership-card {
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .membership-card:hover {
+    transform: translateY(-5px);
+    z-index: 3;
+  }
+  
+  .delivery-badge {
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+  }
+  
+  .info-row {
+    margin-bottom: 0.8rem;
+    color: #555;
+    position: relative;
+  }
+  
+  .info-row i {
+    width: 20px;
+    color: #3498db;
+  }
+  
+  .status-badge {
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .dropdown-toggle.btn-outline-secondary {
+    border-radius: 20px;
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .dropdown-menu {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 9999;
+    position: absolute;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+    z-index: 9999;
+  }
+  
+  .info-row .dropdown {
+    position: static;
+  }
+  
+  .info-row.mt-3 {
+    position: relative;
+  }
