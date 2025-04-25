@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // frontend/src/pages/DashboardPage.jsx
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -32,13 +35,20 @@ const DashboardPage = () => {
         const orders = { morning: 0, afternoon: 0, evening: 0 };
         let todayDeliveryCount = 0;
 
+<<<<<<< HEAD
         // Count delivered orders and calculate revenue
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
         data.forEach((m) => {
           if (m.status === "delivered") {
             todayDeliveryCount++;
             totalRevenue += comboPrices[m.combo] || 0;
           }
+<<<<<<< HEAD
           // Count active orders by time slot
+=======
+          
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
           if (m.status === "active") {
             if (m.deliveryTime === 'morning') orders.morning++;
             if (m.deliveryTime === 'afternoon') orders.afternoon++;
@@ -52,7 +62,10 @@ const DashboardPage = () => {
       });
   }, []);
 
+<<<<<<< HEAD
   // Prepare data for the charts
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
   const orderData = [
     { time: 'Morning', orders: ordersByTime.morning },
     { time: 'Afternoon', orders: ordersByTime.afternoon },
@@ -68,7 +81,10 @@ const DashboardPage = () => {
     <Container className="mt-4">
       <h3>Dashboard</h3>
 
+<<<<<<< HEAD
       {/* Summary Cards */}
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
       <Row className="mt-3">
         <Col md={3}>
           <Card bg="success" text="white">

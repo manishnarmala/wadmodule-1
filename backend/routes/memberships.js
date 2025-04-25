@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* ---------- backend/routes/memberships.js ---------- */
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
@@ -37,6 +40,7 @@ const MembershipSchema = new mongoose.Schema({
 
 const Membership = mongoose.model('Membership', MembershipSchema);
 
+<<<<<<< HEAD
 // Update the GET route to include all statuses
 router.get('/', async (req, res) => {
     const data = await Membership.find({}); // Remove the status filter to get all orders
@@ -44,6 +48,14 @@ router.get('/', async (req, res) => {
   });
 // Update the PUT route to validate status
 router.put('/:id/status', async (req, res) => {
+=======
+router.get('/', async (req, res) => {
+    const data = await Membership.find({}); 
+    res.json(data);
+  });
+
+  router.put('/:id/status', async (req, res) => {
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
     try {
       const { id } = req.params;
       const { status } = req.body;
@@ -68,14 +80,21 @@ router.put('/:id/status', async (req, res) => {
     }
   });
 
+<<<<<<< HEAD
   // ...existing code...
   
 
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
 router.post('/optimized-route', async (req, res) => {
   try {
     const { hub, selectedIds } = req.body;
     
+<<<<<<< HEAD
     // Fetch selected orders
+=======
+    
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
     const memberships = await Membership.find({ 
       _id: { $in: selectedIds },
       status: 'active'
@@ -85,7 +104,10 @@ router.post('/optimized-route', async (req, res) => {
       return res.status(400).json({ message: 'No active orders found' });
     }
 
+<<<<<<< HEAD
     // Calculate optimized route
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
     const calculateRoute = (start, points) => {
       let route = [];
       let current = start;
@@ -93,13 +115,19 @@ router.post('/optimized-route', async (req, res) => {
       let totalDistance = 0;
       let lastDistance = 0;
 
+<<<<<<< HEAD
       // First, find nearest point from hub
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
       let firstPoint = unvisited.reduce((min, point) => {
         const distance = haversineDistance(current, point.coordinates);
         return distance < min.distance ? { point, distance } : min;
       }, { point: unvisited[0], distance: Infinity });
 
+<<<<<<< HEAD
       // Add first point with distance from hub
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
       route.push({
         _id: firstPoint.point._id,
         customerName: firstPoint.point.customerName,
@@ -112,7 +140,10 @@ router.post('/optimized-route', async (req, res) => {
       current = firstPoint.point.coordinates;
       unvisited = unvisited.filter(p => p._id !== firstPoint.point._id);
 
+<<<<<<< HEAD
       // Then find nearest points from last delivery
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
       while (unvisited.length > 0) {
         let nearest = unvisited.reduce((min, point) => {
           const distance = haversineDistance(current, point.coordinates);

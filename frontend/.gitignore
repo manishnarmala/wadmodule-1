@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+.env
+
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)

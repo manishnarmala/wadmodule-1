@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* ---------- backend/server.js ---------- */
+=======
+>>>>>>> 3f865c6 (Add project to wadmodule-1 repository)
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
